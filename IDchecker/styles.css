@@ -1,0 +1,184 @@
+body {
+    background-color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#checker-container {
+    background-color: #404040;
+    color: aliceblue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+#id-input {
+    color: #222;
+    font-weight: bolder;
+    font-family: monospace;
+    font-size: 35px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+}
+
+#id-input:focus {
+    outline: none;
+    border: none;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#check-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#check-btn,
+#clear-btn {
+    color: white;
+    margin-top: 20px;
+    background-color: #222;
+    display: block;
+    border: none;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#check-btn.active,
+#check-btn:hover, 
+#donate-btn.active,
+#donate-btn:hover {
+    opacity: 0.75;
+}
+
+#signature {
+    position:fixed;
+    bottom:0;
+    right: 0;
+    margin: 15px;
+    width: 200px;
+}
+
+#result {
+    margin: 5px;
+    font-size: large;
+    font-weight: 500;
+}
+
+#additional-info {
+    color: white;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* About page */
+#about-container {
+    display: flex;
+    background-color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+.about-card {
+    background-color: #404040;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    margin: 15px;
+}
+
+#about-list {
+    text-align: left;
+}
+
+#underlined {
+    text-decoration: underline;
+    font-size: 15px;
+    color: aliceblue;
+}
+
+#id-number {
+    font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.digits {
+    padding: 1px 3px;
+    color: #222;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+#doubled {
+    background-color: rgb(181,229,80);
+}
+
+#over {
+    background-color: rgb(255, 51, 51);
+}
+
+p {
+    text-align: left;
+}
+
+#donate-btn {
+    background-color: #EFBF04;
+    border: none;
+    padding: 5px 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#donate-link {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#donate-btn-about {
+    background-color: #EFBF04;
+    border: none;
+    padding: 5px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}

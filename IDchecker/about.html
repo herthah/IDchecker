@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg">
+</head>
+<body>
+    <div id="additional-info">
+        <a href="index.html" class="link">Home |</a>
+        <a href="https://github.com/herthah/IDchecker" class="link" target="_blank">Source Code</a>
+    </div>
+    <div id="about-container">
+        <div class="about-card">
+            <h1>Your Data</h1>
+            <ul id="about-list">
+                <li>Your data stays with you. We don't store, share, or save any input you provide.</li>
+                <p></p>
+                <li>This is an open source project, so you may copy our <a href="https://github.com/herthah/IDchecker" class="link" id="underlined">code</a>. Please include some form of acknowlegement.</li>
+            </ul>
+        </div>
+        <div class="about-card">
+            <h1>What makes an ID number valid?</h1>
+            <ul id="about-list">
+                <li>The first check we do is to see if the number has exactly 13 digits.</li>
+                <p></p>
+                <li>We then check the ID number's date and whether it follows the <a href="https://en.wikipedia.org/wiki/Luhn_algorithm" class="link" id="underlined">Luhn Algorithm</a>.</li>
+            </ul>
+        </div>
+        <div class="about-card">
+            <h1>Date validity</h1>
+            <ul id="about-list">
+                <li>The first six digits in a South African ID number indicates a person's date of birth.</li>
+                <p></p>
+                <li>For example, a person with the ID number:</li>
+            </ul>
+            <div id="id-number">
+                <div class="digits">7</div>
+                <div class="digits">8</div>
+                <div class="digits">0</div>
+                <div class="digits">3</div>
+                <div class="digits">1</div>
+                <div class="digits">3</div>
+                <div class="digits">*</div>
+                <div class="digits">*</div>
+                <div class="digits">*</div>
+                <div class="digits">*</div>
+                <div class="digits">*</div>
+                <div class="digits">*</div>
+                <div class="digits">*</div>
+            </div>
+            <ul id="about-list">
+                <li>Was born on 13 March 1978.</li>
+                <p></p>
+                <li>Numbers 1 and 2 indicate the year (78), 3 and 4 indicate the month (03), 5 and 6 indicate the day (13).</li>
+                <p></p>
+                <li>We check that the month digit is not greater than 12 (and not 0).</li>
+                <p></p>
+                <li>We then check that the birth day does not exceed the number of days in a month. For example, 31 April is not a valid birth date.</li>
+            </ul>
+        </div>
+        <div class="about-card">
+            <h1>The Luhn Algorithm</h1>
+            <p>South Africa uses an implementation of the Luhn Algorithm to check the validity of an ID number. Here's how it works:</p>
+            <h3>Step 1</h3>
+            <p>Double every second digit, starting at digit 2.</p>
+            <div id="id-number">
+                <div class="digits">7</div>
+                <div class="digits">8</div>
+                <div class="digits">0</div>
+                <div class="digits">3</div>
+                <div class="digits">1</div>
+                <div class="digits">3</div>
+                <div class="digits">9</div>
+                <div class="digits">0</div>
+                <div class="digits">4</div>
+                <div class="digits">6</div>
+                <div class="digits">7</div>
+                <div class="digits">0</div>
+                <div class="digits">9</div>
+            </div>
+            <p>Gives:</p>
+            <div id="id-number">
+                <div class="digits">7</div>
+                <div class="digits" id="doubled">16</div>
+                <div class="digits">0</div>
+                <div class="digits" id="doubled">6</div>
+                <div class="digits">1</div>
+                <div class="digits" id="doubled">6</div>
+                <div class="digits">9</div>
+                <div class="digits" id="doubled">0</div>
+                <div class="digits">4</div>
+                <div class="digits" id="doubled">12</div>
+                <div class="digits">7</div>
+                <div class="digits" id="doubled">0</div>
+                <div class="digits">9</div>
+            </div>
+            <h3>Step 2</h3>
+            <p>If the doubled number is greater than or equal to 10, subract 9 from the number:</p>
+            <div id="id-number">
+                <div class="digits">7</div>
+                <div class="digits" id="over">16</div>
+                <div class="digits">0</div>
+                <div class="digits">6</div>
+                <div class="digits">1</div>
+                <div class="digits">6</div>
+                <div class="digits">9</div>
+                <div class="digits">0</div>
+                <div class="digits">4</div>
+                <div class="digits" id="over">12</div>
+                <div class="digits">7</div>
+                <div class="digits">0</div>
+                <div class="digits">9</div>
+            </div>
+            <p>Gives:</p>
+            <div id="id-number">
+                <div class="digits">7</div>
+                <div class="digits" id="doubled">7</div>
+                <div class="digits">0</div>
+                <div class="digits">6</div>
+                <div class="digits">1</div>
+                <div class="digits">6</div>
+                <div class="digits">9</div>
+                <div class="digits">0</div>
+                <div class="digits">4</div>
+                <div class="digits" id="doubled">3</div>
+                <div class="digits">7</div>
+                <div class="digits">0</div>
+                <div class="digits">9</div>
+            </div>
+            <h3>Step 3</h3>
+            <p>Add up all of the digits:</p>
+            <div id="id-number">
+                <div class="digits">7</div>
+                <div class="digits">7</div>
+                <div class="digits">0</div>
+                <div class="digits">6</div>
+                <div class="digits">1</div>
+                <div class="digits">6</div>
+                <div class="digits">9</div>
+                <div class="digits">0</div>
+                <div class="digits">4</div>
+                <div class="digits">3</div>
+                <div class="digits">7</div>
+                <div class="digits">0</div>
+                <div class="digits">9</div>
+            </div>
+            <p>Has a sum of 59.</p>
+
+            <h3>Step 4</h3>
+            <p>If this sum is divisible by 10, then it is a potentially valid ID number.</p>
+            <p>59 is not divisible by 10, so this cannot be a South African ID number.</p>
+        </div>
+        <div class="about-card">
+            <button id="donate-btn-about"><a href="https://buymeacoffee.com/hertha" id="donate-link" target="_blank">☕ Buy me a Coffee!</a></button>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
